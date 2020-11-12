@@ -5,14 +5,188 @@
     <title>회원가입</title>
     <link rel="stylesheet" href="../css/style.css"/>
     <style>
+        /* 
+            회원가입 CSS참고
+            http://54.180.147.250/board/user/register.html
+         */
+
+        #user.register {
+            width: 600px;
+            margin: 60px auto;
+        }
+        #user.register table {
+            width: 100%;
+            border-top: 2px solid #000;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        #user.register table caption {
+            padding: 10px 0;
+            font-weight: bold;
+            text-align: left;
+        }
+        #user.register table td {}
+        #user.register table td:nth-child(1) {
+            width: 70px;
+            padding: 7px 13px;
+            border: 1px solid #e9e9e9;
+            background: #f5f8f9;
+            text-align: left;
+        }
+        #user.register table td:nth-child(2) {
+            padding: 7px 10px;
+            border: 1px solid #e9e9e9;
+            background: transparent;
+        }
+        #user.register table td > p {
+            display: block;
+            padding: 0 0 5px;
+            line-height: 1.4em;
+        }
+        #user.register table input {
+            height: 22px;
+            border: 1px solid #e4eaec;
+            background: #f7f7f7;
+            color: #000;
+            vertical-align: middle;
+            line-height: 2em;
+            margin-bottom: 2px;
+        }
+        #user.register table div {}
+        #user.register table div:nth-child(1) > input {
+            height: 22px;
+            border: 1px solid #e4eaec;
+            background: #f7f7f7;
+            color: #000;
+            vertical-align: middle;
+            line-height: 2em;
+            margin-bottom: 2px;
+        }
+        #user.register table div:nth-child(2) > input {
+            height: 22px;
+            border: 1px solid #e4eaec;
+            background: #f7f7f7;
+            color: #000;
+            vertical-align: middle;
+            line-height: 2em;
+            margin-bottom: 2px;
+        }
+        #user.register table div:nth-child(3) > input {
+            height: 22px;
+            border: 1px solid #e4eaec;
+            background: #f7f7f7;
+            color: #000;
+            vertical-align: middle;
+            line-height: 2em;
+            margin-bottom: 2px;
+        }
+        #user.register table button {
+            padding: 4px;
+            border: 1px solid #bebebe;
+            background: #e9e9e9;
+            color: #222;
+            cursor: pointer;
+        }
+        
+        #user.register > form > div {
+            float: right;
+            margin-top: 16px;
+        }
+        #user.register > form > div > .btnCancel {
+            padding: 8px;
+            border: 1px solid #bebebe;
+            background: #fdfdfd;
+            color: #222;
+            cursor: pointer;
+        }
+        #user.register > form > div > .btnRegister {
+            padding: 7px;
+            border: 1px solid #bebebe;
+            background: #e9e9e9;
+            color: #222;
+            cursor: pointer;
+        }
 
     </style>
 </head>
 <body>
     <div id="wrapper">
         <section id="user" class="register">
+            <form action="#" method="POST">
+                <table border="1">
+                    <caption>사이트 이용정보 입력</caption>
+                    <tr>
+                        <td>아이디</td>
+                        <td>
+                            <input type="text" name="uid" placeholder="아이디입력" />
+                            <span class="result_uid"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호</td>
+                        <td>
+                            <input type="password" name="pass1" placeholder="비밀번호 입력" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호 확인</td>
+                        <td>
+                            <input type="password" name="pass2" placeholder="비밀번호 확인 입력" />
+                            <span class="result_pass"></span>
+                        </td>
+                    </tr>
+                </table>
+                <table border="0">
+                    <caption>개인정보 입력</caption>
+                    <tr>
+                        <td>이름</td>
+                        <td>
+                            <input type="text" name="name" placeholder="이름 입력" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>별명</td>
+                        <td>
+                            <p>공백없이 한글, 영문, 숫자만 입력가능</p>
+                            <input type="text" name="nick" placeholder="별명 입력" />
+                            <span class="result_nick"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>E-Mail</td>
+                        <td>
+                            <input type="email" name="email" placeholder="이메일 입력" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>휴대폰</td>
+                        <td>
+                            <input type="text" name="hp" placeholder="- 포함 13자리 입력" minlength="13" maxlength="13"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>주소</td>
+                        <td>
+                            <div>
+                                <input type="text" name="zip" placeholder="우편번호"/>
+                                <button>주소검색</button>
+                            </div>
+                            <div>
+                                <input type="text" name="addr1" size="50" placeholder="기본주소 검색"/>
+                            </div>
+                            <div>
+                                <input type="text" name="addr2" size="50" placeholder="상세주소 입력"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
 
+                <div>
+                    <a href="#" class="btnCancel">취소</a>
+                    <input type="submit" class="btnRegister" value="회원가입"/>
+                </div>
 
+            </form>
         </section>
     </div>
 </body>
