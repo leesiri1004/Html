@@ -2,38 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>글쓰기</title>
+    <title>글수정</title>
     <link rel="stylesheet" href="./css/style.css"/>
 </head>
     <style>
 
-        #board.write table {
+        #board.modify table {
             width: 100%;
             border-top: 2px solid #111;
             border-collapse: collapse;
         }
-        #board.write table td {
+        #board.modify table td {
             padding: 8px 5px;
             border-top: 1px solid #e9e9e9;
             border-bottom: 1px solid #e9e9e9;
         }
-        #board.write > td:nth-child(1) {
+        #board.modify > td:nth-child(1) {
             width: 100px;
             background: #f5f8f9;
             text-align: center;
         }
-
-        #board.write > form > .btns {
+        #board.modify > td:nth-child(2) {
+            width: 100%;
+            border: 0;
+            resize: none;
+        }
+        #board.modify > form > .btns {
             float: right;
             margin-top: 10px;
         }
-        #board.write > form > div > .cancel {
+        #board.modify > form > div > .cancel {
             padding: 7px;
             border: 1px solid #d9ded9;
             background: #f2f5f9;
             color: #000;
         }
-        #board.write > form > div > .submit {
+        #board.modify > form > div > .submit {
             padding: 7px;
             border: 1px solid #3b3c3f;
             background: #4b545e;
@@ -42,18 +46,18 @@
     </style>
 <body>
     <div id="wrapper">
-        <section id="board" class="write">
+        <section id="board" class="modify">
             <form action="#" method="POST"> 
             <h3>글쓰기</h3>
             <table border="0">
                 <tr>
                     <td>제목</td>
-                    <td><input type="text" name="subject" placeholder="제목을 입력하세요." required/></td>
-                </tr>
+                    <td><input type="text" name="subject" placeholder="제목을 입력하세요." required value="제목입니다"/></td>
+                </tr>   
                 <tr>
                     <td>내용</td>
                     <td>
-                        <textarea name="content" rows="20" required></textarea>
+                        <textarea name="content" rows="20" required>내용입니다.</textarea>
                     </td>
                 </tr>
                 <tr>
@@ -67,7 +71,7 @@
 
             <div class="btns">
                 <a href="#" class="cancel">취소</a>
-                <input type="submit" class="submit" value="작성완료"/>
+                <input type="submit" class="submit" value="수정완료"/>
             </div>
 
             </form>
