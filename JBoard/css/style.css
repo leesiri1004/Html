@@ -114,6 +114,102 @@
     
     /* 회원 - 회원가입 */
 
+    #user.register {
+        width: 600px;
+        margin: 60px auto;
+    }
+    #user.register table {
+        width: 100%;
+        border-top: 2px solid #000;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    #user.register table caption {
+        padding: 10px 0;
+        font-weight: bold;
+        text-align: left;
+    }
+    #user.register table td {}
+    #user.register table td:nth-child(1) {
+        width: 70px;
+        padding: 7px 13px;
+        border: 1px solid #e9e9e9;
+        background: #f5f8f9;
+        text-align: left;
+    }
+    #user.register table td:nth-child(2) {
+        padding: 7px 10px;
+        border: 1px solid #e9e9e9;
+        background: transparent;
+    }
+    #user.register table td > p {
+        display: block;
+        padding: 0 0 5px;
+        line-height: 1.4em;
+    }
+    #user.register table input {
+        height: 22px;
+        border: 1px solid #e4eaec;
+        background: #f7f7f7;
+        color: #000;
+        vertical-align: middle;
+        line-height: 2em;
+        margin-bottom: 2px;
+    }
+    #user.register table div {}
+    #user.register table div:nth-child(1) > input {
+        height: 22px;
+        border: 1px solid #e4eaec;
+        background: #f7f7f7;
+        color: #000;
+        vertical-align: middle;
+        line-height: 2em;
+        margin-bottom: 2px;
+    }
+    #user.register table div:nth-child(2) > input {
+        height: 22px;
+        border: 1px solid #e4eaec;
+        background: #f7f7f7;
+        color: #000;
+        vertical-align: middle;
+        line-height: 2em;
+        margin-bottom: 2px;
+    }
+    #user.register table div:nth-child(3) > input {
+        height: 22px;
+        border: 1px solid #e4eaec;
+        background: #f7f7f7;
+        color: #000;
+        vertical-align: middle;
+        line-height: 2em;
+        margin-bottom: 2px;
+    }
+    #user.register table button {
+        padding: 4px;
+        border: 1px solid #bebebe;
+        background: #e9e9e9;
+        color: #222;
+        cursor: pointer;
+    }
+    
+    #user.register > form > div {
+        float: right;
+        margin-top: 16px;
+    }
+    #user.register > form > div > .btnCancel {
+        padding: 8px;
+        border: 1px solid #bebebe;
+        background: #fdfdfd;
+        color: #222;
+        cursor: pointer;
+    }
+    #user.register > form > div > .btnRegister {
+        padding: 7px;
+        border: 1px solid #bebebe;
+        background: #e9e9e9;
+        color: #222;
+        cursor: pointer;
+    }
 
 
     /* 게시판 공통 */
@@ -200,7 +296,41 @@
     }
     
     /* 글쓰기 */
-    
+
+    #board.write table {
+        width: 100%;
+        border-top: 2px solid #111;
+        border-collapse: collapse;
+    }
+    #board.write table td {
+        padding: 8px 5px;
+        border-top: 1px solid #e9e9e9;
+        border-bottom: 1px solid #e9e9e9;
+    }
+    #board.write > td:nth-child(1) {
+        width: 100px;
+        background: #f5f8f9;
+        text-align: center;
+    }
+
+    #board.write > form > .btns {
+        float: right;
+        margin-top: 10px;
+    }
+    #board.write > form > div > .cancel {
+        padding: 7px;
+        border: 1px solid #d9ded9;
+        background: #f2f5f9;
+        color: #000;
+    }
+    #board.write > form > div > .submit {
+        padding: 7px;
+        border: 1px solid #3b3c3f;
+        background: #4b545e;
+        color: #fff;
+    }   
+
+
     /* 글보기 */
     #board.view {}
     #board.view > div {
@@ -249,3 +379,40 @@
     }
 
     /* 글수정 */
+
+    #board.modify table {
+        width: 100%;
+        border-top: 2px solid #111;
+        border-collapse: collapse;
+    }
+    #board.modify table td {
+        padding: 8px 5px;
+        border-top: 1px solid #e9e9e9;
+        border-bottom: 1px solid #e9e9e9;
+    }
+    #board.modify > td:nth-child(1) {
+        width: 100px;
+        background: #f5f8f9;
+        text-align: center;
+    }
+    #board.modify > td:nth-child(2) {
+        width: 100%;
+        border: 0;
+        resize: none;
+    }
+    #board.modify > form > .btns {
+        float: right;
+        margin-top: 10px;
+    }
+    #board.modify > form > div > .cancel {
+        padding: 7px;
+        border: 1px solid #d9ded9;
+        background: #f2f5f9;
+        color: #000;
+    }
+    #board.modify > form > div > .submit {
+        padding: 7px;
+        border: 1px solid #3b3c3f;
+        background: #4b545e;
+        color: #fff;
+    }

@@ -7,48 +7,12 @@
 </head>
     <style>
 
-        #board.modify table {
-            width: 100%;
-            border-top: 2px solid #111;
-            border-collapse: collapse;
-        }
-        #board.modify table td {
-            padding: 8px 5px;
-            border-top: 1px solid #e9e9e9;
-            border-bottom: 1px solid #e9e9e9;
-        }
-        #board.modify > td:nth-child(1) {
-            width: 100px;
-            background: #f5f8f9;
-            text-align: center;
-        }
-        #board.modify > td:nth-child(2) {
-            width: 100%;
-            border: 0;
-            resize: none;
-        }
-        #board.modify > form > .btns {
-            float: right;
-            margin-top: 10px;
-        }
-        #board.modify > form > div > .cancel {
-            padding: 7px;
-            border: 1px solid #d9ded9;
-            background: #f2f5f9;
-            color: #000;
-        }
-        #board.modify > form > div > .submit {
-            padding: 7px;
-            border: 1px solid #3b3c3f;
-            background: #4b545e;
-            color: #fff;
-        }
     </style>
 <body>
     <div id="wrapper">
         <section id="board" class="modify">
             <form action="#" method="POST"> 
-            <h3>글쓰기</h3>
+            <h3>글수정</h3>
             <table border="0">
                 <tr>
                     <td>제목</td>
@@ -70,7 +34,7 @@
             </table>
 
             <div class="btns">
-                <a href="#" class="cancel">취소</a>
+                <a href="http://127.0.0.1:5500/JBoard/list.html" class="cancel">취소</a>
                 <input type="submit" class="submit" value="수정완료"/>
             </div>
 
