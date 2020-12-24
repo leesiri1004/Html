@@ -3,163 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>팜스토리</title>
-    <style>
-        /* 전체 스타일 초기화 */
-        * {
-            margin: 0;
-            padding: 0;
-            font: normal 12px '돋움';
-        }
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    
+    <script>
+        $(function () {
+           $('.slider > ul').bxSlider({
+               slideWidth: 980,
+               pager: false,
+               controls: false,
+               auto: true
+           }); 
+        });
 
-        ul, ol {list-style: none;} /* 리스트표시 */
-
-        a {text-decoration: none; color: #111;} /* 링크표시 */
-
-        #wrapper {
-            width: 980px;
-            height: auto;
-            margin: 0 auto;
-            /*border: 1px solid red; /* 레이아웃 작업할때 설정해주면 작업하기 쉬움 */
-        }
-
-        /* 헤더영역 */
-        header {
-            position: relative;
-            width: 100%;
-            height: 142px;
-            background-image: url('./img/head_top_line.png');
-            background-repeat: no-repeat;
-        }
-        header > .logo {
-            position: absolute;
-            left: 50%;
-            top: 20px;
-            margin-left: -95px;
-        }
-        header > p {
-            float: right;
-            margin-top: 10px;
-        }
-        header > img {
-            float: right;
-            clear: both;
-            margin-top: 30px;
-        }
-        header > .gnb {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 50px;
-            /* overflow: visible; */
-        }
-        header > .gnb > li {
-            float: left;
-            width: 20%;
-            height: 100%;
-            background-image: url('./img/head_menu_line.png');
-            background-repeat: no-repeat;
-            background-position: 0 -6px;
-        }
-        header > .gnb > li > a { /* a 태그는 크기를 설정할 수 없다 therefore, display:block을 설정해줘야함*/
-            position: relative;
-            display: block;
-            width: 100%;
-            height: 100%;
-            font-size: 0;
-            background-position: 0 5px;
-            background-repeat: no-repeat;
-        }
-        header > .gnb > li > a > img {
-            position: absolute;
-            left: 50%;
-            top: -16px;
-        }
-
-        header > .gnb > li:nth-child(1) > a {background-image: url('./img/head_menu1.png');}
-        header > .gnb > li:nth-child(2) > a {background-image: url('./img/head_menu2.png');}
-        header > .gnb > li:nth-child(3) > a {background-image: url('./img/head_menu3.png');}
-        header > .gnb > li:nth-child(4) > a {background-image: url('./img/head_menu4.png');}
-        header > .gnb > li:nth-child(5) > a {background-image: url('./img/head_menu5.png');}
-
-        header > .gnb > li:nth-child(1) > a:hover {background-image: url('./img/head_menu1_ov.png');}
-        header > .gnb > li:nth-child(2) > a:hover {background-image: url('./img/head_menu2_ov.png');}
-        header > .gnb > li:nth-child(3) > a:hover {background-image: url('./img/head_menu3_ov.png');}
-        header > .gnb > li:nth-child(4) > a:hover {background-image: url('./img/head_menu4_ov.png');}
-        header > .gnb > li:nth-child(5) > a:hover {background-image: url('./img/head_menu5_ov.png');}
-
-        /* 푸터영역 */
-        footer {
-            width: 100%;
-            height: 120px;
-            margin-top: 10px;
-            border-top: 1px solid #d1cab2;
-            box-sizing: border-box;
-        }
-        footer > img {
-            position: relative;
-            left: 10%;
-            top: 5px;
-            margin-left: -95px;
-        }
-        footer > p {
-            float: right;
-            font-size: 11px;
-            margin-top: 26px;
-            margin-right: 16px;
-            line-height: 16px;
-            color: #585858;
-        }
-        footer > p > em {
-            font-weight: bold;
-            color: #888888;
-            line-height: 20px;
-        }
-
-        /* 메인 */
-        main {
-            width: 100%;
-            height: auto;
-            border: 1px solid orange;
-            box-sizing: border-box;
-        }
-
-        main > div {
-            width: 100%;
-            margin-top: 10px;
-            border: 1px solid blue;
-            box-sizing: border-box;
-        }
-
-        /* 메인 - slider */
-        main > .slider {
-            height: 312px;
-        }
-
-        /* 메인 - quick */
-        main > .quick {
-            height: 74px;
-        }
-
-        /* 메인 - latest */
-        main > .latest {
-            height: 186px;
-        }
-
-        /* 메인 - info */
-        main > .info {
-            height: 154px;
-        }
-
-    </style>
+        $( function() {
+            $( "#tabs" ).tabs();
+        });
+    </script>
 </head>
 <body>
     <div id="wrapper">
         <header>
-            <a href="#" class="logo"><img src="./img/logo.png" alt="로고"/></a>
+            <a href="./index.html" class="logo"><img src="./img/logo.png" alt="로고"/></a>
            
             <p>
-                <a href="#">HOME |</a>
+                <a href="./index.html">HOME |</a>
                 <a href="#">로그인 |</a>
                 <a href="#">회원가입 |</a>
                 <a href="#">고객센터</a>
@@ -168,19 +40,188 @@
             <img src="./img/head_txt_img.png" alt="3만원 이상 무료배송">
 
             <ul class="gnb">
-                <li><a href="#">팜스토리소개</a></li>
-                <li><a href="#"><img src="./img/head_menu_badge.png" alt="30%">장보기</a></li>
-                <li><a href="#">농작물이야기</a></li>
-                <li><a href="#">이벤트</a></li>
-                <li><a href="#">커퓨니티</a></li>
+                <li><a href="./introduction/hello.html">팜스토리소개</a></li>
+                <li><a href="./market/market.html"><img src="./img/head_menu_badge.png" alt="30%">장보기</a></li>
+                <li><a href="./croptalk/story.html">농작물이야기</a></li>
+                <li><a href="./event/event.html">이벤트</a></li>
+                <li><a href="./community/notice.html">커뮤니티</a></li>
             </ul>
 
         </header>
         <main>
-            <div class="slider"></div>
-            <div class="quick"></div>
-            <div class="latest"></div>
-            <div class="info"></div>
+            <div class="slider">
+                <ul>
+                    <li><img src="./img/main_slide_img1.jpg" alt="슬라이더1"></li>
+                    <li><img src="./img/main_slide_img2.jpg" alt="슬라이더2"></li>
+                    <li><img src="./img/main_slide_img3.jpg" alt="슬라이더3"></li>
+                </ul>
+
+                <img src="./img/main_slide_img_tit.png" alt="사람과 자연을 사랑하는 팜스토리" />
+
+                <div class="banner">
+                    <img src="./img/main_banner_txt.png" alt="GRAND OPEN" />
+                    <img src="./img/main_banner_tit.png" alt="팜스토리 오픈기념 30% 할인 이벤트" />
+                    <img src="./img/main_banner_img.png" alt="과일" />
+                </div>
+            </div>
+
+            <div class="quick">
+                <a href="./community/todaymenu.html"><img src="./img/main_banner_sub1_tit.png" alt="팜스토리 오늘의 식단"></a>
+                <a href="./community/cook.html"><img src="./img/main_banner_sub2_tit.png" alt="팜스토리 나도 요리사"></a>
+            </div>
+
+            <div class="latest">
+                <div>
+                    <a href="./croptalk/grow.html"><img src="./img/main_latest1_tit.png" alt="텃밭가꾸기"/></a>
+                    <a href="./croptalk/grow.html"><img src="./img/main_latest1_img.jpg" alt="텃밭가꾸기 이미지"/></a>
+                    <table border="0">
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <a href="./croptalk/school.html"><img src="./img/main_latest2_tit.png" alt="귀농학교"/></a>
+                    <a href="./croptalk/school.html"><img src="./img/main_latest2_img.jpg" alt="귀농학교 이미지"/></a>
+                    <table border="0">
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">첫번째 이야기: 귀농예찬</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">첫번째 이야기: 귀농예찬</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">첫번째 이야기: 귀농예찬</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">첫번째 이야기: 귀농예찬</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">첫번째 이야기: 귀농예찬</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <a href="./croptalk/story.html"><img src="./img/main_latest3_tit.png" alt="농작물이야기"/></a>
+                    <a href="./croptalk/story.html"><img src="./img/main_latest3_img.jpg" alt="농작물이야기 이미지"/></a>
+                    <table border="0">
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">팜스토리의 건강한 쌀</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">팜스토리의 건강한 쌀</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">팜스토리의 건강한 쌀</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">팜스토리의 건강한 쌀</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">팜스토리의 건강한 쌀</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="info">
+                <div>
+                    <img src="./img/main_sub2_cs_tit.png" class="tit" alt="고객센터안내"/>
+                    <img src="./img/main_sub2_cs_img.png" alt="전화">
+                    <img src="./img/main_sub2_cs_txt.png" alt="전화번호">
+                    <span>
+                        평일: AM 09:00 ~ PM 06:00<br />
+                        점심: PM 12:00 ~ PM 01:00<br />
+                        토, 일요일, 공휴일 휴무<br />
+                    </span>
+                    <div>
+                        <a href="./community/customer.html"><img src="./img/main_sub2_cs_bt1.png" alt="1:1고객문의"/></a>
+                        <a href="./community/q&a.html"><img src="./img/main_sub2_cs_bt2.png" alt="자주묻는질문"/></a>
+                        <a href="https://parcel.epost.go.kr/auth.EpostLogin.parcel" target="_blank"><img src="./img/main_sub2_cs_bt3.png" alt="배송조회"/></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="./img/main_sub2_account_tit.png" class="tit" alt="계좌안내"/>
+                    <p class="account">
+                        기업은행 123-456789-01-01-012<br />
+                        국민은행 01-1234-56789<br />
+                        우리은행 123-456789-01-01-012<br />
+                        하나은행 123-456789-01-01<br />
+                        예 금 주 (주)팜스토리
+                    </p>
+                </div>
+                <div id="tabs">
+                    <ul>
+                      <li><a href="#tabs-1">공지사항</a></li>
+                      <li><a href="#tabs-2">1:1 고객문의</a></li>
+                      <li><a href="#tabs-3">자주묻는 질문</a></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <ul>
+                            <li>· 홈페이지를 오픈하였습니다.</li>
+                            <li>· 홈페이지를 오픈하였습니다.</li>
+                            <li>· 홈페이지를 오픈하였습니다.</li>
+                        </ul>
+                    </div>
+                    <div id="tabs-2">
+                        <ul>
+                            <li>· 홈페이지 이용 관련 불편사항을 들려주세요</li>
+                            <li>· 홈페이지 이용 관련 불편사항을 들려주세요</li>
+                            <li>· 홈페이지 이용 관련 불편사항을 들려주세요</li>
+                        </ul>
+                    </div>
+                    <div id="tabs-3">
+                        <ul>
+                            <li>· 홈페이지 오픈 기념 이벤트를 진행합니다.</li>
+                            <li>· 홈페이지 오픈 기념 이벤트를 진행합니다.</li>
+                            <li>· 홈페이지 오픈 기념 이벤트를 진행합니다.</li>
+                        </ul>
+                    </div>
+
+                  </div>
+            </div>
         </main>
         <footer>
             <img src="./img/footer_logo.png" alt="로고"/>
